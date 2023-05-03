@@ -1,0 +1,46 @@
+body{
+    color: purple;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#convertion-input{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#convertion-choice{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#exchange {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.button{
+    font-size: 1.5em;
+}
+
+#submit-button{
+    display: flex;
+    flex-direction: column;
+    font-size: 1em;
+    background: purple;
+	color: whitesmoke;
+	border-radius: 5%;
+}
+
