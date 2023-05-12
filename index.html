@@ -9,20 +9,22 @@
     <link rel="stylesheet" href="/style.css"> 
 </head>
 <body>
-    <h1>Conversor de real</h1>
+    <div class="container">
+        <h1>Conversor de real</h1>
 
-    <div id="convertion-input">
-        <h3>Ponha o valor em real</h3>
-        <input type="number" id="real" name="real">
-    </div>
-    
-    <div id="convertion-choice">
-        <h4>Escolha a moeda que deseja</h4>
-        <div id="exchange">
-            <div class="button"><i class="bi bi-currency-euro"></i></div>
-            <div class="button"><i class="bi bi-currency-dollar"></i></div>
+        <div class="convertion-input">
+            <h3>Ponha o valor em real</h3>
+            <div id="input"><input type="number" id="real" name="real"></div>
         </div>
-        <button id="submit-button">Clique pra converter!</button>
+    
+        <div class="convertion-choice">
+            <h4>Escolha a moeda que deseja</h4>
+            <div id="exchange">
+                <div class="button"><i class="bi bi-currency-euro"></i></div>
+                <div class="button"><i class="bi bi-currency-dollar"></i></div>
+            </div>
+            <button id="submit-button">Converta</button>
+        </div>
     </div>
 
 </body>
