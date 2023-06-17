@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #27374D;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sign_in_card{
+    padding: 2rem;
+    border-radius: 1.5rem;
+    background-color: #F1F6F9; 
+}
+
+h2{
+    color: #27374D;
+    font-size: 33px;
+    font-weight: bold;
+    display: grid;
+    place-items: center;
+}
+
+.myForm{
+    padding-top: 2rem;
+    display: grid;
+    place-items: center;
+}
+
+.input_cadastro{
+    margin-bottom: 2rem;
+    width: 25rem;
+    height: 3rem;
+    border-radius: .5rem;
+    color: #27374D ;
+    outline: none;
+    display: grid;
+    place-content: center;
+    border: 2px lightgray;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+
