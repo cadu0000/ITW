@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>atividade ITW</title>
-    <link rel="stylesheet" href="/style.css"> 
-    <script src="script.js" defer></script>
+    <title>Dolarize!</title>
+    <link rel="stylesheet" href="/style.css">
+    <script type="module" src="script.js" defer></script>
 </head>
 
 <header>
@@ -22,35 +23,39 @@
 </header>
 
 <body>
+    <div id="login_info"></div>
     <div class="container">
-        <div class="container_info">
-            <h2>Por que utilizar a dolarize?</h2>
+        <div class="container_conversor_dolar">
+            <h2>Converta de dólar para real!</h2>
             <br><br>
-            <div class="características">
-                <p>*Faça a sua conversão de real para dólar de forma gratuíta</p>
-                <br>
-                <p>*Atualizações sobre o valor de câmbio a cada 30 segundos!</p>
-                <br>
-                <p>*Não cobramos taxa de câmbio</p>
+            <div class="input">
+                <input type="number" name="dolar" id="dolar" class="input_conversao" required>
+                <label for="dólar" id="label_input_dolar">Valor em dólar $</label>
             </div>
-            <br>
-            <h3>Cadastre-se ou logue para ter acesso a mais recursos</h3>
-            <img src="assets/img_cambio.png" class="img_cambio">
+            <br><br>
+            <button type="submit" class="submit" id="submit_dolar">Clique aqui para converter!</button>
+            <div id="resultado_dolar">
+                <label for="resultado_dolar_input" class="label_resultado"></label>
+            </div>
         </div>
-        <div class="container_conversor">
+        <div class="container_conversor_real">
             <h2>Converta de real para dólar!</h2>
             <br><br>
             <div class="input">
                 <input type="number" name="real" id="real" class="input_conversao" required>
-                <label for="real" class="label_input">Valor em real R$</label>
+                <label for="real" id="label_input_real">Valor em real R$</label>
             </div>
             <br><br>
-            <button type="submit" id="submit">Clique aqui para converter!</button>
-            <div id="resultado">
-                <label for="resultado" class="label_resultado"></label>
+            <button type="submit" class="submit" id="submit_real">Clique aqui para converter!</button>
+            <div id="resultado_real">
+                <label for="resultado_real_input" class="label_resultado"></label>
             </div>
         </div>
+
+    </div>
+    </div>
     </div>
 
 </body>
+
 </html>

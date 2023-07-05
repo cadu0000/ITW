@@ -1,3 +1,4 @@
+import { novoUsuario } from '../classes/usuario.js';
 
 const nome = document.getElementById("nome");
 const email = document.getElementById("email");
@@ -5,39 +6,36 @@ const senha = document.getElementById("senha");
 const testeSenha = document.getElementById("confirmarSenha");
 const cadastroConfirmacao = document.getElementById("cadastro_confirmacao");
 const submitButton = document.getElementById("submit");
-const emailErro = document.getElementById("email_erro")
-const senhaErro = document.getElementById("senha_erro")
-const nomeErro = document.getElementById("nome_erro")
-var listaDeUsuarios = []
+const emailErro = document.getElementById("email_erro");
+const senhaErro = document.getElementById("senha_erro");
+const nomeErro = document.getElementById("nome_erro");
+var listaDeUsuarios = [];
 
 submitButton.addEventListener("click", function () {
     if (nome.value.trim() === "") {
         mudarEstado(nomeErro);
-        erro(emailErro, senhaErro)
-        console.log("1")
-    } else if (!validarEmail(email.value)) {
+        erro(emailErro, senhaErro);
+    }
+    else if (!validarEmail(email.value)) {
         mudarEstado(emailErro);
-        erro(senhaErro, nomeErro)
-        console.log("2")
-    } else if (!confirmarSenha(senha.value, testeSenha.value)) {
+        erro(senhaErro, nomeErro);
+    } 
+    else if (!confirmarSenha(senha.value, testeSenha.value)) {
         mudarEstado(senhaErro);
-        erro(nomeErro, emailErro)
-        console.log("3")
+        erro(nomeErro, emailErro);
     } else {
-        cadastroConfirmacao.style.display = "block";
-        console.log("4")
         erro(nomeErro, emailErro, senhaErro);
-        var usuario = new novoUsuario(nome.value, email.value, senha.value);
+        cadastroConfirmacao.style.display = "block";
+        let usuario = new novoUsuario(nome.value, email.value, senha.value);
         listaDeUsuarios.push(usuario)
-        console.log(listaDeUsuarios)
+        localStorage.setItem('listaDeUsuarios', JSON.stringify(listaDeUsuarios));
+        console.log(listaDeUsuarios);
+        setTimeout(function () {
+            window.location.href = "../login/login.html";
+        }, 5000);
+
     }
 });
-
-function novoUsuario(nome, email, senha) {
-    this.nome = nome;
-    this.email = email;
-    this.senha = senha;
-}
 
 function validarEmail(email) {
     var emailValido = /\S+@\S+\.\S+/;
@@ -48,19 +46,12 @@ function confirmarSenha(senha, confirmarSenha) {
     return senha === confirmarSenha && senha != "";
 }
 
-function mudarEstado(elemento) {
-    var display = elemento.style.display;
+export function mudarEstado(elemento) {
     elemento.style.display = "block";
 }
 
-function erro(elemento1, elemento2, elemento3) {
-    var display1 = elemento1.style.display;
+export function erro(elemento1, elemento2, elemento3) {
     elemento1.style.display = "none";
-
-    var display2 = elemento2.style.display;
     elemento2.style.display = "none";
-
-    var display3 = elemento3.style.display;
     elemento3.style.display = "none";
 }
-

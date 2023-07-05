@@ -17,7 +17,7 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 0 10%;
-    background-color: rgb(255, 255, 255);
+    background-color: white;
     height: 4em;
     position: relative;
 }
@@ -46,12 +46,23 @@ header>h1 {
     margin: 0;
 }
 
+#login_info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 25px;
+    color: black;
+    font-weight: bold;
+    font-size: 25px;
+}
+
 .container {
     display: flex;
     flex-direction: row;
 }
 
-.container_info {
+.container_conversor_dolar {
+    border-radius: 100px;
     margin-left: 10%;
     margin-right: auto;
     margin-top: 10%;
@@ -59,16 +70,17 @@ header>h1 {
     width: 70vh;
     height: 50vh;
     padding: 10px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(232, 239, 246);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: rgb(63, 62, 62);
+    color: black;
 }
 
-.container_conversor {
+.container_conversor_real {
+    border-radius: 100px;
     margin-left: auto;
     margin-right: 10%;
     margin-top: 10%;
@@ -76,12 +88,13 @@ header>h1 {
     width: 70vh;
     height: 50vh;
     padding: 10px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(232, 239, 246);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
+    color: black;
 }
 
 .input {
@@ -116,13 +129,19 @@ header>h1 {
     transform-origin: top left;
 }
 
-.input_conversao:focus~.label_input,
-.input_conversao:valid~.label_input {
+#input_conversao_real:focus~.label_input,
+#input_conversao_real:valid~.label_input {
     top: -20px;
     font-size: 12px;
 }
 
-#submit {
+#input_conversao_dolar:focus~.label_input,
+#input_conversao_dolar:valid~.label_input{
+    top: -20px;
+    font-size: 12px;
+}
+
+.submit {
     background-color: rgb(0, 0, 0);
     width: 80%;
     padding: 10px;
@@ -132,7 +151,10 @@ header>h1 {
     border-radius: 10px;
 }
 
-.img_cambio{
-    width: 120px;
-    height: 120px;
+#resultado_real{
+    padding-top: 20px;
+}
+
+#resultado_dolar{
+    padding-top: 20px;
 }

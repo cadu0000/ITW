@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
     <link rel="stylesheet" href="/sign-in/sign-in.css">
-    <script src="sign-in.js" defer></script>
+    <script type="module" src="sign-in.js" defer></script>
 </head>
 
 <body>
@@ -16,24 +16,24 @@
             <form>
                 <div class="inputs">
                     <div class="name">
-                        <input type="text" name="nome" id="nome" class="input_cadastro" placeholder="    Nome" required>
+                        <input type="text" name="nome" id="nome" class="input_cadastro" placeholder="Nome" required>
                     </div>
                     <div class="email">
-                        <input type="email" name="email" id="email" class="input_cadastro" placeholder="    Email"
+                        <input type="email" name="email" id="email" class="input_cadastro" placeholder="Email"
                             required>
                     </div>
                     <div class="senha">
-                        <input type="password" name="senha" id="senha" class="input_cadastro" placeholder="    Senha"
+                        <input type="password" name="senha" id="senha" class="input_cadastro" placeholder="Senha"
                             required>
                     </div>
                     <div class="confirmarSenha">
                         <input type="password" name="confirmarSenha" id="confirmarSenha" class="input_cadastro"
-                            placeholder="    Confirme a senha" required>
+                            placeholder="Confirme a senha" required>
                     </div>
                     <a href="../login/login.html" class="login">Já tem cadastro? Logue clicando aqui</a>
                 </div>
             </form>
-            <div id="cadastro_confirmacao" class="erro">Cadastro concluído com sucesso.</div>
+            <div id="cadastro_confirmacao" class="erro">Cadastro concluído. Você está sendo redirecionado </div>
             <div id="email_erro" class="erro">Email inválido.</div>
             <div id="senha_erro" class="erro">Senha inválida ou não congruente.</div>
             <div id="nome_erro" class="erro">Digite algum nome.</div>
